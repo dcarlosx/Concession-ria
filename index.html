@@ -11,9 +11,6 @@
         <h1>Concessionária</h1>
     </div>
 
-    <div class="col-8 m-auto pt-3 pb-2 text-center">
-        <a href="/form" class="btn btn-success">Adicionar</a>
-    </div>
 
     <div class="col-8 m-auto pt-4 pb-2 text-center">
         <table class="table">
@@ -23,29 +20,92 @@
               <th scope="col">Sexo</th>
               <th scope="col">Telefone</th>
               <th scope="col">Endereço</th>
+              <th scope="col">Ações</th>
+            </tr>
+          </thead>
+          <tbody>
+          {% for dbs in db %}
+          <tr>
+              <td>{{dbs.cliente}}</td>
+              <td>{{dbs.sexo}}</td>
+              <td>{{dbs.telefone}}</td>
+              <td>{{dbs.endereco}}
+              <td>
+              <a href="/view/{{dbs.id}}/" class="btn btn-dark">Visualizar</a>
+              <a href="" class="btn btn-primary">Editar</a>
+              <a href="" class="btn btn-danger">Deletar</a>
+          </td>
+            </tr>
+          {% endfor %}
+
+          </tbody>
+        </table>
+    </div>
+     <div class="col-8 m-auto pt-3 pb-2 text-center">
+        <a href="/form" class="btn btn-success">Adicionar</a>
+    </div>
+
+     <div class="col-8 m-auto pt-4 pb-2 text-center">
+        <table class="table">
+          <thead class="thead-dark">
+            <tr>
+              <th scope="col">Motocicletas</th>
+              <th scope="col">Modelo</th>
+              <th scope="col">Ano</th>
             </tr>
           </thead>
           <tbody>
             <tr>
-              <th scope="row">Diego</th>
-              <td>Masculino</td>
-              <td>2558-8879</td>
-              <td>Rua Damiao Cunha</td>
+              <th scope="row">Yamaha</th>
+              <td>XT660-R</td>
+              <td>2020</td>
             </tr>
             <tr>
-              <th scope="row">Marcos</th>
-              <td>Masculino</td>
-              <td>3664-8559</td>
-              <td>Rua Domingo de Magalhaes</td>
+              <th scope="row">Honda</th>
+              <td>XRE-300</td>
+              <td>2021</td>
             </tr>
-            <tr>
-              <th scope="row">Fernanda</th>
-              <td>Feminino</td>
-              <td>3558-9987</td>
-              <td>Rua Saputiaba</td>
-            </tr>
+
           </tbody>
         </table>
     </div>
+     <div class="col-8 m-auto pt-3 pb-2 text-center">
+        <a href="/form" class="btn btn-success">Adicionar</a>
+    </div>
+
+     <div class="col-8 m-auto pt-4 pb-2 text-center">
+        <table class="table">
+          <thead class="thead-dark">
+            <tr>
+              <th scope="col">Vendas</th>
+              <th scope="col">Clientes</th>
+              <th scope="col">Motocicleta</th>
+              <th scope="col">Data</th>
+              <th scope="col">Valor</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <th scope="row">1</th>
+              <td>Junior</td>
+              <td>Yamaha</td>
+              <td>13/04/2021</td>
+              <td>R$ 8000,00</td>
+            </tr>
+            <tr>
+              <th scope="row">2</th>
+              <td>Felipe</td>
+              <td>Honda</td>
+              <td>26/02/2021</td>
+              <td>R$ 12000,00</td>
+            </tr>
+
+          </tbody>
+        </table>
+    </div>
+     <div class="col-8 m-auto pt-3 pb-2 text-center">
+        <a href="/form" class="btn btn-success">Adicionar</a>
+    </div>
+
 </body>
 </html>
